@@ -1,0 +1,1 @@
+{"version":3,"file":"service-initiliazation.js","sourceRoot":"","sources":["../src/service-initiliazation.ts"],"names":[],"mappings":";;;AAAA,mCAA0D;AAG1D,MAAsB,qBAAqB;IACzC,wEAAwE;IACjE,MAAM,CAAC,IAAI,CAAC,GAA0B;QAC1C,qBAAY,CAAC,IAAI,CAAC,uBAAuB,CAAC,CAAC;QAC5C,GAAG,CAAC,OAAO,CAAC,6BAAoB,EAAE,sBAAsB,CAAC,CAAC;IAC5D,CAAC;CACF;AAND,sDAMC"}

@@ -1,0 +1,30 @@
+import { Count, DataObject, Filter, FilterExcludingWhere, Options, Where } from '@loopback/repository';
+import { AccountRepository, AppUserRepository, BankAccount, BankAccountRelations, BankAccountRepository, InvestorDetailsRepository, InvestorTypeRepository } from 'common';
+import { CoreBankingRepository } from '../repositories';
+export declare class BankAccountFacade {
+    private bankAccountRepository;
+    private accountRepository;
+    private appUserRepository;
+    private investorTypeRepository;
+    private investorDetailsRepository;
+    private coreBankingRepository;
+    constructor(bankAccountRepository: BankAccountRepository, accountRepository: AccountRepository, appUserRepository: AppUserRepository, investorTypeRepository: InvestorTypeRepository, investorDetailsRepository: InvestorDetailsRepository, coreBankingRepository: CoreBankingRepository);
+    create(entity: DataObject<BankAccount>, options?: Options): Promise<BankAccount>;
+    createAll(entities: DataObject<BankAccount>[], options?: Options): Promise<BankAccount[]>;
+    save(entity: BankAccount, options?: Options): Promise<BankAccount>;
+    find(filter?: Filter<BankAccount>, options?: Options): Promise<(BankAccount & BankAccountRelations)[]>;
+    findOne(filter?: Filter<BankAccount>, options?: Options): Promise<(BankAccount & BankAccountRelations) | null>;
+    findById(id: number, filter?: FilterExcludingWhere<BankAccount>, options?: Options): Promise<BankAccount & BankAccountRelations>;
+    update(entity: BankAccount, options?: Options): Promise<void>;
+    delete(entity: BankAccount, options?: Options): Promise<void>;
+    updateAll(data: DataObject<BankAccount>, where?: Where<BankAccount>, options?: Options): Promise<Count>;
+    updateById(id: number, data: DataObject<BankAccount>, options?: Options): Promise<void>;
+    replaceById(id: number, data: DataObject<BankAccount>, options?: Options): Promise<void>;
+    deleteAll(where?: Where<BankAccount>, options?: Options): Promise<Count>;
+    deleteById(id: number, options?: Options): Promise<void>;
+    count(where?: Where<BankAccount>, options?: Options): Promise<Count>;
+    exists(id: number, options?: Options): Promise<boolean>;
+    validatePanAadharLink(customerId: string): Promise<number>;
+    updateBankAccount(id: number, accountId: number, data: DataObject<BankAccount>, options?: Options): Promise<Object>;
+    fetchBankAccountDetailsById(bankAccountId: number, accountId: number): Promise<BankAccount>;
+}
